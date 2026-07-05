@@ -661,7 +661,7 @@ export function Hero() {
               Ready to start learning?
             </h3>
             <p className="mx-auto mt-2 max-w-md text-sm text-zinc-400">
-              Sign in and ask your first question — Hitesh AI and Piyush AI
+              Sign in and ask your first question — Hitesh Choudhary and Piyush Garg
               are ready when you are.
             </p>
             <div className="mt-6 flex justify-center">

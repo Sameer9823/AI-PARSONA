@@ -104,7 +104,7 @@ const STEPS = [
     icon: Sparkles,
     title: "Pick your mentor",
     description:
-      "Choose between Hitesh AI and Piyush AI depending on what you want to learn.",
+      "Choose between Hitesh Choudhary and Piyush Garg depending on what you want to learn.",
   },
   {
     number: "03",

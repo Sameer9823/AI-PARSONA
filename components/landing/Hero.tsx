@@ -351,7 +351,7 @@ export function Hero() {
   return (
     <>
       {/* ---------------- HERO BANNER ---------------- */}
-      <section className="relative overflow-hidden bg-aurora-gradient pb-20 pt-16 sm:pb-28 sm:pt-24 lg:pb-36 lg:pt-28">
+      <section className="relative overflow-hidden bg-aurora-gradient pb-20 pt-16 sm:pb-28 sm:pt-24 lg:pb-36 ">
         {/* dot grid */}
         <div
           className="pointer-events-none absolute inset-0 opacity-[0.12] [mask-image:radial-gradient(ellipse_at_center,black_0%,transparent_70%)]"
@@ -405,7 +405,7 @@ export function Hero() {
               Hitesh Choudhary and Piyush Garg. Ask about React, Node, system
               design, or your dev career get answers in their parsona.
             </motion.p>
-          
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -453,23 +453,7 @@ export function Hero() {
               ))}
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.55 }}
-              className="mt-10 grid w-full max-w-sm grid-cols-3 gap-3 border-t border-white/5 pt-6 sm:max-w-none sm:gap-6 lg:max-w-md"
-            >
-              {STATS.map((stat) => (
-                <div key={stat.label} className="text-center lg:text-left">
-                  <div className="text-xl font-bold text-white sm:text-2xl lg:text-3xl">
-                    {stat.value}
-                  </div>
-                  <div className="mt-0.5 text-[11px] text-zinc-500 sm:text-xs">
-                    {stat.label}
-                  </div>
-                </div>
-              ))}
-            </motion.div>
+           
           </div>
 
           {/* ---- chat preview column ---- */}

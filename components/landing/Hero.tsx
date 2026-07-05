@@ -24,15 +24,15 @@ import { PersonaCard } from "./PersonaCard";
 import { PERSONAS } from "@/lib/personas";
 
 const TECH_BADGES = [
-  { label: "Gemini 2.5 Flash" },
-  { label: "LangChain" },
+  { label: "Llama " },
+  { label: "OpenRouter" },
   { label: "Next.js 15" },
   { label: "Clerk Auth" },
 ];
 
 const STATS = [
   { value: "2", label: "AI Mentors" },
-  { value: "24/7", label: "Availability" },
+  { value: "24/7", label: "Availability" }, 
   { value: "100%", label: "Free to chat" },
 ];
 
@@ -392,7 +392,7 @@ export function Hero() {
               <span className="bg-gradient-to-r from-accent-purple via-fuchsia-400 to-accent-blue bg-clip-text text-transparent">
                 AI Versions
               </span>{" "}
-              of Your Favorite Mentors
+              of Your Favourite Mentors
             </motion.h1>
 
             <motion.p
@@ -403,9 +403,9 @@ export function Hero() {
             >
               Chat with AI mentors modeled on the public teaching styles of
               Hitesh Choudhary and Piyush Garg. Ask about React, Node, system
-              design, or your dev career — get answers in their voice.
+              design, or your dev career get answers in their parsona.
             </motion.p>
-
+          
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}

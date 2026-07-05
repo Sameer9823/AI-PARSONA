@@ -44,7 +44,7 @@ export function LandingNavbar() {
             </a>
           ))}
           <a
-            href="https://github.com"
+            href="https://github.com/Sameer9823"
             target="_blank"
             rel="noopener noreferrer"
             className="group relative flex items-center gap-1.5 px-3 py-2 text-sm text-zinc-400 transition-colors hover:text-zinc-100"

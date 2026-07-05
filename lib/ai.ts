@@ -116,7 +116,7 @@ export async function* streamPersonaResponse(
   let receivedAnyText = false;
 
   try {
-    // @ts-expect-error - stream: true narrows this to an AsyncIterable at runtime
+  
     for await (const chunk of stream) {
       const text = chunk?.choices?.[0]?.delta?.content ?? "";
       if (text) {

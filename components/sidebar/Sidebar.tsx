@@ -11,6 +11,7 @@ import {
   Sparkles,
   Plus,
   Trash2,
+  Home,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { usePersonaContext } from "@/context/PersonaContext";
@@ -24,8 +25,10 @@ import { getPersona } from "@/lib/personas";
 import { toast } from "sonner";
 
 const NAV_ITEMS = [
+  {href: "/", label: "Home", icon: Home },
   { href: "/dashboard", label: "Dashboard", icon: LayoutDashboard },
   { href: "/dashboard/settings", label: "Settings", icon: Settings },
+
 ];
 
 export function Sidebar() {
@@ -34,9 +37,7 @@ export function Sidebar() {
   const { startNewConversation, restoreConversation, activeConversationId } =
     usePersonaContext();
 
-  const [conversations, setConversations] = useState<ConversationSummary[]>(
-    []
-  );
+  const [conversations, setConversations] = useState<ConversationSummary[]>([]);
 
   const refresh = () => setConversations(getConversationIndex());
 
@@ -78,14 +79,14 @@ export function Sidebar() {
     <aside className="hidden h-screen w-64 flex-col border-r border-white/5 bg-card/40 lg:flex">
       <div className="flex items-center gap-2 px-6 py-5 font-semibold">
         <Link
-  href="/"
-  className="flex items-center gap-2 transition-opacity hover:opacity-80"
->
-  <span className="grid h-8 w-8 place-items-center rounded-lg bg-gradient-to-br from-accent-purple to-accent-blue">
-    <Sparkles className="h-4 w-4 text-white" />
-  </span>
-  Persona AI
-</Link>
+          href="/"
+          className="flex items-center gap-2 transition-opacity hover:opacity-80"
+        >
+          <span className="grid h-8 w-8 place-items-center rounded-lg bg-gradient-to-br from-accent-purple to-accent-blue">
+            <Sparkles className="h-4 w-4 text-white" />
+          </span>
+          Persona AI
+        </Link>
       </div>
 
       <button
@@ -107,7 +108,7 @@ export function Sidebar() {
                 "flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm transition-colors",
                 active
                   ? "bg-gradient-to-r from-accent-purple/20 to-accent-blue/20 text-white"
-                  : "text-zinc-400 hover:bg-white/5 hover:text-zinc-200"
+                  : "text-zinc-400 hover:bg-white/5 hover:text-zinc-200",
               )}
             >
               <Icon className="h-4 w-4" />
@@ -133,7 +134,7 @@ export function Sidebar() {
                 <span
                   className={cn(
                     "grid h-5 w-5 flex-shrink-0 place-items-center rounded-full bg-gradient-to-br text-[10px] font-semibold text-white",
-                    persona.ui.gradient
+                    persona.ui.gradient,
                   )}
                 >
                   {persona.name[0]}
@@ -154,7 +155,7 @@ export function Sidebar() {
                         "group flex w-full items-center justify-between gap-2 rounded-lg px-3 py-2 text-left text-sm transition-colors",
                         isActive
                           ? "bg-white/10 text-zinc-100"
-                          : "text-zinc-400 hover:bg-white/5 hover:text-zinc-200"
+                          : "text-zinc-400 hover:bg-white/5 hover:text-zinc-200",
                       )}
                     >
                       <span className="truncate">{c.title}</span>

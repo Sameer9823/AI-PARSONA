@@ -9,6 +9,7 @@ const ITEMS = [
   { href: "/dashboard", label: "Chat", icon: LayoutDashboard },
   { href: "/", label: "Home", icon: Home },
   { href: "/dashboard/settings", label: "Settings", icon: Settings },
+  { href: "/dashboard/history", label: "History", icon: History },
 ];
 
 export function MobileNav() {
